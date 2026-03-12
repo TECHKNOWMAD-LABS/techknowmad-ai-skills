@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-# TechKnowmad AI â Skills Installation Script
+# ═══════════════════════════════════════════════════════════════════════
+# TechKnowmad AI — Skills Installation Script
 # Installs all 20 TechKnowmad custom + combination skills
 # + clones 16 community skill repos and links best skills
-# âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+# ═══════════════════════════════════════════════════════════════════════
 set -euo pipefail
 
 GREEN='\033[0;32m'
@@ -19,12 +19,12 @@ SUCCESS=0
 SKIP=0
 FAIL=0
 
-log()  { echo -e "${GREEN}  â${NC} $1"; ((SUCCESS++)); }
-warn() { echo -e "${YELLOW}  â ${NC} $1"; ((SKIP++)); }
-fail() { echo -e "${RED}  â${NC} $1"; ((FAIL++)); }
+log()  { echo -e "${GREEN}  ✓${NC} $1"; ((SUCCESS++)); }
+warn() { echo -e "${YELLOW}  ⚠${NC} $1"; ((SKIP++)); }
+fail() { echo -e "${RED}  ✗${NC} $1"; ((FAIL++)); }
 
-# âââ PHASE 1: Prerequisites âââ
-echo -e "\n${CYAN}âââ PHASE 1: PREREQUISITES âââ${NC}"
+# ═══ PHASE 1: Prerequisites ═══
+echo -e "\n${CYAN}═══ PHASE 1: PREREQUISITES ═══${NC}"
 mkdir -p "$SKILLS_DIR" "$CLONE_DIR"
 
 if ! command -v git &>/dev/null; then
@@ -43,8 +43,8 @@ fi
 
 log "Prerequisites verified"
 
-# âââ PHASE 2: Install TechKnowmad Custom Skills (10) âââ
-echo -e "\n${CYAN}âââ PHASE 2: INSTALLING TECHKNOWMAD CUSTOM SKILLS âââ${NC}"
+# ═══ PHASE 2: Install TechKnowmad Custom Skills (10) ═══
+echo -e "\n${CYAN}═══ PHASE 2: INSTALLING TECHKNOWMAD CUSTOM SKILLS ═══${NC}"
 
 install_skill() {
     local src="$1"
@@ -73,8 +73,8 @@ for skill in "${CUSTOM_SKILLS[@]}"; do
     install_skill "$SCRIPT_DIR/custom-skills/$skill" "tkm-$skill"
 done
 
-# âââ PHASE 3: Install TechKnowmad Combination Skills (10) âââ
-echo -e "\n${CYAN}âââ PHASE 3: INSTALLING TECHKNOWMAD COMBINATION SKILLS âââ${NC}"
+# ═══ PHASE 3: Install TechKnowmad Combination Skills (10) ═══
+echo -e "\n${CYAN}═══ PHASE 3: INSTALLING TECHKNOWMAD COMBINATION SKILLS ═══${NC}"
 
 COMBO_SKILLS=(
     "multi-agent-research-swarm"
@@ -93,8 +93,8 @@ for skill in "${COMBO_SKILLS[@]}"; do
     install_skill "$SCRIPT_DIR/combination-skills/$skill" "tkm-$skill"
 done
 
-# âââ PHASE 4: Clone Community Skill Repos âââ
-echo -e "\n${CYAN}âââ PHASE 4: CLONING COMMUNITY SKILL REPOSITORIES âââ${NC}"
+# ═══ PHASE 4: Clone Community Skill Repos ═══
+echo -e "\n${CYAN}═══ PHASE 4: CLONING COMMUNITY SKILL REPOSITORIES ═══${NC}"
 
 clone_repo() {
     local url="$1"
@@ -136,8 +136,8 @@ clone_repo "https://github.com/czlonkowski/n8n-skills.git" "n8n-skills"
 clone_repo "https://github.com/levnikolaevich/claude-code-skills.git" "delivery-skills"
 clone_repo "https://github.com/bobmatnyc/claude-mpm-skills.git" "mpm-skills"
 
-# âââ PHASE 5: Link Community Skills âââ
-echo -e "\n${CYAN}âââ PHASE 5: LINKING COMMUNITY SKILLS âââ${NC}"
+# ═══ PHASE 5: Link Community Skills ═══
+echo -e "\n${CYAN}═══ PHASE 5: LINKING COMMUNITY SKILLS ═══${NC}"
 
 link_dir_skills() {
     local base_dir="$1"
@@ -194,11 +194,11 @@ echo "Linking delivery skills..."
 link_dir_skills "$CLONE_DIR/delivery-skills" "dlvr-" 3
 link_dir_skills "$CLONE_DIR/mpm-skills" "mpm-" 3
 
-# âââ SUMMARY âââ
+# ═══ SUMMARY ═══
 echo ""
-echo -e "${CYAN}âââââââââââââââââââââââââââââââââââââââââââââââââââ${NC}"
+echo -e "${CYAN}═══════════════════════════════════════════════════${NC}"
 echo -e "${CYAN}  TECHKNOWMAD AI SKILLS INSTALLATION COMPLETE${NC}"
-echo -e "${CYAN}âââââââââââââââââââââââââââââââââââââââââââââââââââ${NC}"
+echo -e "${CYAN}═══════════════════════════════════════════════════${NC}"
 echo ""
 echo -e "  ${GREEN}Succeeded:${NC} $SUCCESS"
 echo -e "  ${YELLOW}Skipped:${NC}   $SKIP"
@@ -215,9 +215,9 @@ echo -e "  ${YELLOW}ACTION REQUIRED:${NC} Restart Claude Code to load all skills
 echo ""
 echo -e "  Verify with: ${CYAN}ls -la ~/.claude/skills/ | head -30${NC}"
 echo ""
-echo "  âââââââââââââââââââââââââââââââââââââââââââââââââââ"
-echo "  â  TechKnowmad AI â Ultra Mega Skill Ecosystem    â"
-echo "  â  20 custom skills + community repos linked       â"
-echo "  â  techknowmad.ai                                  â"
-echo "  âââââââââââââââââââââââââââââââââââââââââââââââââââ"
+echo "  ┌─────────────────────────────────────────────────┐"
+echo "  │  TechKnowmad AI — Ultra Mega Skill Ecosystem    │"
+echo "  │  20 custom skills + community repos linked       │"
+echo "  │  techknowmad.ai                                  │"
+echo "  └─────────────────────────────────────────────────┘"
 echo ""
