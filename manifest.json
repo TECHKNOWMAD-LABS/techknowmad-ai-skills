@@ -92,7 +92,7 @@
       {
         "name": "multi-agent-research-swarm",
         "path": "combination-skills/multi-agent-research-swarm",
-        "description": "Parallel literature review — 10 agents reviewing papers simultaneously",
+        "description": "Parallel literature review â 10 agents reviewing papers simultaneously",
         "composes": ["research-commander", "swarm-commander"],
         "category": "research"
       },
@@ -106,7 +106,7 @@
       {
         "name": "self-evolving-skill-ecosystem",
         "path": "combination-skills/self-evolving-skill-ecosystem",
-        "description": "Recursive self-improvement — skills that create skills",
+        "description": "Recursive self-improvement â skills that create skills",
         "composes": ["skill-factory", "prompt-evolution", "knowledge-distiller"],
         "category": "meta"
       },
@@ -120,14 +120,14 @@
       {
         "name": "antifragile-ai-ops",
         "path": "combination-skills/antifragile-ai-ops",
-        "description": "Chaos engineering for AI agents — break, recover, learn",
+        "description": "Chaos engineering for AI agents â break, recover, learn",
         "composes": ["self-healing-agent", "agent-debugger"],
         "category": "agents"
       },
       {
         "name": "pareto-prompt-optimizer",
         "path": "combination-skills/pareto-prompt-optimizer",
-        "description": "Multi-objective prompt engineering — accuracy vs cost vs latency",
+        "description": "Multi-objective prompt engineering â accuracy vs cost vs latency",
         "composes": ["prompt-evolution", "model-evaluator", "cost-optimizer"],
         "category": "meta"
       },
@@ -142,14 +142,14 @@
         "name": "startup-creative-automation",
         "path": "combination-skills/startup-creative-automation",
         "description": "Brand identity to pitch deck in one pipeline",
-        "composes": [],
+        "composes": ["knowledge-distiller", "cost-optimizer"],
         "category": "creative"
       },
       {
         "name": "compliance-as-code",
         "path": "combination-skills/compliance-as-code",
         "description": "Continuous SOC2/ISO/GDPR compliance with auto-evidence generation",
-        "composes": [],
+        "composes": ["self-healing-agent", "cost-optimizer"],
         "category": "security"
       },
       {
