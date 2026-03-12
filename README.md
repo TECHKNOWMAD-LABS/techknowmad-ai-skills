@@ -1,12 +1,17 @@
-# TechKnowmad AI Skills — Ultra Mega Skill Ecosystem
+# TechKnowmad AI Skills
 
-> **20 production-grade skills for autonomous AI/ML research lab operations.**
-> Custom-built skills + radical combination skills. Designed for Claude Code.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Plugin-orange.svg)](https://github.com/TECHKNOWMAD-LABS/techknowmad-ai-skills)
+[![Skills](https://img.shields.io/badge/Skills-20-green.svg)](#whats-inside)
+
+> **20 enterprise-grade skills for autonomous AI/ML research lab operations.**
+> Custom-built skills + composable combination skills. Designed for [Claude Code](https://docs.claude.com).
 
 ## What's Inside
 
-### Custom Skills (10) — Built from Scratch
-Gap analysis skills that don't exist anywhere in the community:
+### Custom Skills (10) — Purpose-Built
+
+Original skills addressing gaps in the Claude Code ecosystem:
 
 | Skill | What It Does | Priority |
 |-------|-------------|----------|
@@ -21,7 +26,8 @@ Gap analysis skills that don't exist anywhere in the community:
 | `cost-optimizer` | Cross-cloud spend analysis, GPU strategies, token cost reduction | P2 |
 | `knowledge-distiller` | Compress large documents into optimal skill prompts | P2 |
 
-### Combination Skills (10) — Radical Compositions
+### Combination Skills (10) — Composable Pipelines
+
 Skills composed from multiple base skills for compound capabilities:
 
 | Skill | Composes | What It Does |
@@ -39,13 +45,21 @@ Skills composed from multiple base skills for compound capabilities:
 
 ## Installation
 
+### As a Claude Plugin
+
+```bash
+claude plugin add TECHKNOWMAD-LABS/techknowmad-ai-skills
+```
+
 ### Quick Install (All Skills)
+
 ```bash
 chmod +x scripts/install-techknowmad-skills.sh
 ./scripts/install-techknowmad-skills.sh
 ```
 
 ### Manual Install (Individual Skills)
+
 ```bash
 # Copy a single skill
 cp -r custom-skills/research-commander ~/.claude/skills/research-commander
@@ -55,6 +69,7 @@ ln -s "$(pwd)/custom-skills/research-commander" ~/.claude/skills/research-comman
 ```
 
 ### Restart Claude Code
+
 ```bash
 # Close and reopen Claude Code to load new skills
 claude
@@ -62,20 +77,16 @@ claude
 
 ## Prerequisites
 
-These skills are designed to work with the **TechKnowmad Mega Powerhouse** MCP stack. They reference MCPs like arXiv, fal.ai, Langfuse, Ruflo, etc. Install the MCP stack first:
-
-```bash
-./install-mega-powerhouse.sh
-```
-
-Skills will still function without all MCPs installed — they gracefully fall back when a referenced MCP isn't available.
+These skills are designed to work with the **TechKnowmad MCP stack**. They reference MCPs like arXiv, fal.ai, Langfuse, Ruflo, etc. Skills will still function without all MCPs installed — they gracefully fall back when a referenced MCP isn't available.
 
 ## Repo Structure
+
 ```
 techknowmad-ai-skills/
-├── README.md                          ← You are here
-├── manifest.json                      ← Skill registry
-├── custom-skills/                     ← 10 original skills
+├── .claude-plugin/          ← Plugin metadata
+│   ├── plugin.json
+│   └── marketplace.json
+├── custom-skills/           ← 10 original skills
 │   ├── research-commander/SKILL.md
 │   ├── swarm-commander/SKILL.md
 │   ├── model-evaluator/SKILL.md
@@ -86,7 +97,7 @@ techknowmad-ai-skills/
 │   ├── patent-researcher/SKILL.md
 │   ├── cost-optimizer/SKILL.md
 │   └── knowledge-distiller/SKILL.md
-├── combination-skills/                ← 10 composed skills
+├── combination-skills/      ← 10 composed skills
 │   ├── multi-agent-research-swarm/SKILL.md
 │   ├── red-team-ai-models/SKILL.md
 │   ├── self-evolving-skill-ecosystem/SKILL.md
@@ -97,22 +108,29 @@ techknowmad-ai-skills/
 │   ├── startup-creative-automation/SKILL.md
 │   ├── compliance-as-code/SKILL.md
 │   └── ip-aware-competitive-intel/SKILL.md
-└── scripts/
-    └── install-techknowmad-skills.sh  ← Auto-installer
+├── scripts/
+│   └── install-techknowmad-skills.sh
+├── manifest.json            ← Skill registry
+├── CONTRIBUTING.md
+├── SECURITY.md
+└── LICENSE
 ```
 
-## Value of This Repo
+## Why This Exists
 
-**For TechKnowmad AI**: Curated, branded skill ecosystem — version-controlled, shareable across team instances, iteratively improvable.
+**For teams**: A curated, version-controlled skill ecosystem — shareable across team instances, iteratively improvable.
 
-**For the Community**: Reference architecture for building a research lab skill stack. These skills represent patterns that don't exist elsewhere:
-- Multi-agent research swarms (nobody is doing parallel paper review)
+**For the community**: Reference architecture for building a research lab skill stack. These skills represent patterns that don't exist elsewhere:
+
+- Multi-agent research swarms (parallel paper review with consensus synthesis)
 - Self-evolving skill ecosystems (recursive self-improvement)
 - Antifragile AI ops (chaos engineering for agents)
 - Pareto prompt optimization (multi-objective prompt engineering)
 - Zero-touch ML pipelines (fully autonomous model lifecycle)
 
-**For Thought Leadership**: Establishes TechKnowmad as the team that codified autonomous AI research operations into reusable, composable skills.
+## Security
+
+See [SECURITY.md](SECURITY.md) for vulnerability disclosure policy.
 
 ## License
 
@@ -121,11 +139,11 @@ MIT — Use, modify, distribute freely. Attribution appreciated.
 ## Contributing
 
 PRs welcome. Each skill must include:
+
 - `SKILL.md` with Role, Trigger Conditions, and structured instructions
 - Integration points listing required MCPs
 - At least one example invocation
 
 ---
 
-*Built by TechKnowmad AI — March 2026*
-*Powering autonomous intelligence development.*
+*Built by [TechKnowmad AI](https://techknowmad.ai) — Powering autonomous intelligence development.*
