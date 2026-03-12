@@ -1,0 +1,179 @@
+{
+  "name": "techknowmad-ai-skills",
+  "version": "1.0.0",
+  "description": "Ultra Mega Skill Ecosystem for Autonomous AI/ML Research Lab Operations",
+  "author": "TechKnowmad AI <admin@techknowmad.ai>",
+  "homepage": "https://techknowmad.ai",
+  "license": "MIT",
+  "skills": {
+    "custom": [
+      {
+        "name": "research-commander",
+        "path": "custom-skills/research-commander",
+        "description": "Full research lifecycle orchestrator",
+        "priority": "P0",
+        "category": "research",
+        "dependencies": ["arXiv MCP", "Memory MCP", "GitHub MCP"]
+      },
+      {
+        "name": "swarm-commander",
+        "path": "custom-skills/swarm-commander",
+        "description": "Multi-agent swarm coordination with consensus protocols",
+        "priority": "P0",
+        "category": "agents",
+        "dependencies": ["Ruflo MCP", "Memory MCP"]
+      },
+      {
+        "name": "model-evaluator",
+        "path": "custom-skills/model-evaluator",
+        "description": "Automated benchmark suite runner with leaderboards",
+        "priority": "P0",
+        "category": "ml-ops",
+        "dependencies": ["HuggingFace MCP", "GitHub MCP"]
+      },
+      {
+        "name": "agent-debugger",
+        "path": "custom-skills/agent-debugger",
+        "description": "Trace agent decision chains and diagnose failures",
+        "priority": "P1",
+        "category": "agents",
+        "dependencies": ["Langfuse MCP", "Sentry MCP"]
+      },
+      {
+        "name": "self-healing-agent",
+        "path": "custom-skills/self-healing-agent",
+        "description": "Autonomous recovery and adaptive resilience",
+        "priority": "P1",
+        "category": "agents",
+        "dependencies": ["Langfuse MCP", "PagerDuty MCP", "Prometheus MCP"]
+      },
+      {
+        "name": "prompt-evolution",
+        "path": "custom-skills/prompt-evolution",
+        "description": "Genetic algorithm-based prompt optimization",
+        "priority": "P1",
+        "category": "meta",
+        "dependencies": ["Memory MCP"]
+      },
+      {
+        "name": "skill-factory",
+        "path": "custom-skills/skill-factory",
+        "description": "Auto-generate new skills from detected patterns",
+        "priority": "P1",
+        "category": "meta",
+        "dependencies": ["GitHub MCP"]
+      },
+      {
+        "name": "patent-researcher",
+        "path": "custom-skills/patent-researcher",
+        "description": "AI/ML patent prior art search and IP strategy",
+        "priority": "P2",
+        "category": "research",
+        "dependencies": ["Tavily MCP", "Perplexity MCP"]
+      },
+      {
+        "name": "cost-optimizer",
+        "path": "custom-skills/cost-optimizer",
+        "description": "Cross-cloud spend analysis and inference cost reduction",
+        "priority": "P2",
+        "category": "ml-ops",
+        "dependencies": ["Prometheus MCP", "Langfuse MCP"]
+      },
+      {
+        "name": "knowledge-distiller",
+        "path": "custom-skills/knowledge-distiller",
+        "description": "Compress large documents into optimal skill prompts",
+        "priority": "P2",
+        "category": "meta",
+        "dependencies": ["Repomix MCP", "Obsidian MCP"]
+      }
+    ],
+    "combinations": [
+      {
+        "name": "multi-agent-research-swarm",
+        "path": "combination-skills/multi-agent-research-swarm",
+        "description": "Parallel literature review â 10 agents reviewing papers simultaneously",
+        "composes": ["research-commander", "swarm-commander"],
+        "category": "research"
+      },
+      {
+        "name": "red-team-ai-models",
+        "path": "combination-skills/red-team-ai-models",
+        "description": "Adversarial security testing for ML pipelines",
+        "composes": ["pen-tester", "ai-security", "model-evaluator"],
+        "category": "security"
+      },
+      {
+        "name": "self-evolving-skill-ecosystem",
+        "path": "combination-skills/self-evolving-skill-ecosystem",
+        "description": "Recursive self-improvement â skills that create skills",
+        "composes": ["skill-factory", "prompt-evolution", "knowledge-distiller"],
+        "category": "meta"
+      },
+      {
+        "name": "academic-output-pipeline",
+        "path": "combination-skills/academic-output-pipeline",
+        "description": "Experiment results to paper to poster to grant proposal",
+        "composes": ["research-commander"],
+        "category": "research"
+      },
+      {
+        "name": "antifragile-ai-ops",
+        "path": "combination-skills/antifragile-ai-ops",
+        "description": "Chaos engineering for AI agents â break, recover, learn",
+        "composes": ["self-healing-agent", "agent-debugger"],
+        "category": "agents"
+      },
+      {
+        "name": "pareto-prompt-optimizer",
+        "path": "combination-skills/pareto-prompt-optimizer",
+        "description": "Multi-objective prompt engineering â accuracy vs cost vs latency",
+        "composes": ["prompt-evolution", "model-evaluator", "cost-optimizer"],
+        "category": "meta"
+      },
+      {
+        "name": "zero-touch-ml-pipeline",
+        "path": "combination-skills/zero-touch-ml-pipeline",
+        "description": "Fully autonomous data to deployment to monitoring to retraining",
+        "composes": ["self-healing-agent"],
+        "category": "ml-ops"
+      },
+      {
+        "name": "startup-creative-automation",
+        "path": "combination-skills/startup-creative-automation",
+        "description": "Brand identity to pitch deck in one pipeline",
+        "composes": [],
+        "category": "creative"
+      },
+      {
+        "name": "compliance-as-code",
+        "path": "combination-skills/compliance-as-code",
+        "description": "Continuous SOC2/ISO/GDPR compliance with auto-evidence generation",
+        "composes": [],
+        "category": "security"
+      },
+      {
+        "name": "ip-aware-competitive-intel",
+        "path": "combination-skills/ip-aware-competitive-intel",
+        "description": "Patents + papers + products competitive landscape",
+        "composes": ["patent-researcher"],
+        "category": "research"
+      }
+    ]
+  },
+  "categories": {
+    "research": "AI/ML research lifecycle skills",
+    "agents": "Autonomous agent operations skills",
+    "ml-ops": "ML operations and infrastructure skills",
+    "meta": "Self-improvement and meta-learning skills",
+    "security": "Security, compliance, and governance skills",
+    "creative": "Creative and design automation skills"
+  },
+  "total_skills": 20,
+  "created": "2026-03-12",
+  "compatible_with": "Claude Code CLI + Cowork",
+  "notes": {
+    "dependencies": "Listed MCP dependencies are recommended integrations, not hard requirements. Skills function independently.",
+    "composes": "Listed compositions reference conceptual capabilities embedded in each skill, not runtime imports."
+  }
+}
