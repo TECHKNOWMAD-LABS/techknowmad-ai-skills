@@ -1,0 +1,46 @@
+{
+  "name": "techknowmad-ai",
+  "owner": {
+    "name": "TechKnowmad AI",
+    "email": "admin@techknowmad.ai"
+  },
+  "metadata": {
+    "description": "20 enterprise-grade Claude Code skills for autonomous AI/ML research lab operations",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "techknowmad-ai-skills",
+      "source": "./",
+      "description": "20 enterprise-grade Claude Code skills for autonomous AI/ML research lab operations -- custom-built gap-analysis skills + radical combination skills for research lifecycle, multi-agent swarms, self-evolving ecosystems, and zero-touch ML pipelines",
+      "version": "1.0.0",
+      "author": {
+        "name": "TechKnowmad AI",
+        "email": "admin@techknowmad.ai"
+      },
+      "homepage": "https://techknowmad.ai",
+      "repository": "https://github.com/TECHKNOWMAD-LABS/techknowmad-ai-skills",
+      "license": "MIT",
+      "keywords": [
+        "ai-research",
+        "mlops",
+        "autonomous-agents",
+        "multi-agent-swarm",
+        "prompt-engineering",
+        "self-healing",
+        "chaos-engineering",
+        "compliance-automation",
+        "patent-research"
+      ],
+      "category": "ai-research",
+      "tags": [
+        "ai",
+        "ml",
+        "research",
+        "autonomous",
+        "agents",
+        "mlops"
+      ]
+    }
+  ]
+}
